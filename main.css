@@ -1,0 +1,12 @@
+h1{ color: blue;text-align: center;font-size: 30pt; font-family:"Comic Sans MS",sans-serif;}
+p.warning{ color:white; text-align: center; font-size: 12pt; font-family:"Arial Narrow",Arial; }
+footer {color:white; text-align:center; font-size: small; }
+img.logo {display: block; margin: 0 auto; width: 50%; }
+div{ color: orange;text-align: center;font-size: 25pt; font-family: "Lucida Grande""Times New Roman"; }
+p.text {color:lime; text-align: left; margin-left: 20%; font-size: 24pt; font-family:"Century Gothic", sans-serif;}
+a {color: yellow; text-align: center;font-size: 30pt; font-family:"Monotype Corsiva","Comic Sans MS";}
+div.center{text-align: center}
+form{text-align: center;}
+a:hover{color:aqua}
+form{text-align: center; font-size: 25pt; color: yellow; font-family: Arial, serif;}
+body{background-color: black;}
