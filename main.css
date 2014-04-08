@@ -10,5 +10,5 @@ a.link:hover{background-color:aqua}
 form{text-align: center; font-size: 25pt; color: yellow; font-family: Arial, serif;}
 body{background-color: black;}
 ul.menu{display: inline;list-style-type: none; margin-left: auto; margin-right: auto;}
-a.link{font-size: 20px; background-color: lime; display: block; width: 120px;}
-li.nav{float: center;}
+a.link{font-size: 20px; background-color: lime; display: block; width: 240px;}
+li.nav{float: left;}
