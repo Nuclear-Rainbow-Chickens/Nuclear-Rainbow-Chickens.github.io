@@ -6,8 +6,9 @@ div{ color: orange;text-align: center;font-size: 25pt; font-family: "Lucida Gran
 p.text {color:lime; text-align: left; margin-left: 20%; font-size: 24pt; font-family:"Century Gothic", sans-serif;}
 div.center{text-align: center}
 form{text-align: center;}
-a.link:hover{color:aqua}
+a.link:hover{background-color:aqua}
 form{text-align: center; font-size: 25pt; color: yellow; font-family: Arial, serif;}
 body{background-color: black;}
 ul.menu{display: inline;list-style-type: none; margin-left: auto; margin-right: auto;}
-a.link{font-size: 20px; background-color: lime;}
+a.link{font-size: 20px; background-color: lime; display: block; width: 120px;}
+li.nav{float: center;}
