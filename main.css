@@ -4,9 +4,10 @@ footer {color:white; text-align:center; font-size: small; }
 img.logo {display: block; margin: 0 auto; width: 50%; }
 div{ color: orange;text-align: center;font-size: 25pt; font-family: "Lucida Grande""Times New Roman"; }
 p.text {color:lime; text-align: left; margin-left: 20%; font-size: 24pt; font-family:"Century Gothic", sans-serif;}
-a {color: yellow; text-align: center;font-size: 30pt; font-family:"Monotype Corsiva","Comic Sans MS";}
 div.center{text-align: center}
 form{text-align: center;}
-a:hover{color:aqua}
+a.link:hover{color:aqua}
 form{text-align: center; font-size: 25pt; color: yellow; font-family: Arial, serif;}
 body{background-color: black;}
+ul.menu{display: inline;list-style-type: none; margin-left: auto; margin-right: auto;}
+a.link{font-size: 20px; background-color: lime;}
