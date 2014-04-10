@@ -1,3 +1,3 @@
 function command() {
-  alert(document.form["input"]["command"].value);
+  alert("afdasf" + document.form["input"]["command"].value);
 }
