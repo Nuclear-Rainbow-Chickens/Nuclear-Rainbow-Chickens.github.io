@@ -1,2 +1,3 @@
-
-document.write("<h1>Hello</h1>");
+function command() {
+  alert(document.form["input"]["command"].value);
+}
