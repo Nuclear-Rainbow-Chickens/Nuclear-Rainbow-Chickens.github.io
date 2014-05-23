@@ -14,4 +14,4 @@ ul.normal{margin-left: auto; margin-right: auto;}
 a.link{font-size: 20px; background-color: lime; display: block; width: 240px; color: red;}
 li.nav{float: left;}
 li.normal{float: left;}
-table {border: 20px solid white;}
+table, th, td {border: 20px solid white;}
