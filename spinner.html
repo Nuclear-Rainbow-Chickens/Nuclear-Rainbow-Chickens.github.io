@@ -2,7 +2,18 @@
 <html>
   <head>
     <title>A Spinner</title>
-    <script type="text/javascript" src="/spinner.js"></script>
+    <script type="text/javascript">
+      var sections[];
+
+      function test() {
+        document.write("<h1>Welcome to Spinner Probability Simulator!</h1>");
+      } 
+      function add() {
+        var name = document.section.elements["sectionname"].value;
+        var percent = document.section.elements["percentage"].value;
+        document.write("<p>Added Section</p>" +name+ "<p>with percentage of</p>" +percent+ "<p>%</p>");
+      }
+    </script>
   </head>
   <body onload="test()">
     <form id="section" name="section" onsubmit="add()">
