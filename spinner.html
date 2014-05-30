@@ -5,24 +5,60 @@
     <head>
     <script>
       document.write("<h1>Welcome to Spinner Probability Simulator!</h1>");
+      document.write("<p>Debug Mode?</p>");
+      document.write('<input type="checkbox" id="debug" </br>');
       document.write("<p>Name of the section:</p>");
       document.write('<input type="text" id="name">');
       document.write("<p>Percentage of total:</p>");
-      document.write('<input type="number" id="percent">');
-      document.write('<input type="button" id="enter" value="Add Section" onclick="add()">');
+      document.write('<input type="number" id="percent" min="1" max="100" step="1"> </br>');
+      document.write('<input type="button" id="enter" value="Add Section" onclick="add()"> </br>');
+      document.write('<input type="button" id="spin" value="When the percentage is 100%, click here to spin the wheel!" onclick="spin()">');
       
       var sections = [];
+      var total = 0;
+      var debug = document.getElementById("debug");
       
       function add()
       {
       	var box = document.getElementById("name");
-      	var number = document.getElementById("percent");
-      	for(var i = 0; i < (number.value - 1); ++i)
-      	{
-      	  sections.push(box.value);
+      	var xxx = document.getElementById("percent");
+      	if(debug.checked == true) {
+      		document.body.innerHTML += "<p>sections.length is " + sections.length + " </p>";
+      		document.body.innerHTML += "<p>xxx.value is " + xxx.value + " </p>";
       	}
-      	document.body.innerHTML += "<p>Added section " +box.value+ " with percentage value of: " +number.value+ "% and the total percentage is: " +sections.length+ "%</p>";
-      	document.getElementById("total").innerHTML = "<h2>The current total percentage is: " +sections.length+ "%</h2>";
+      	total = sections.length + Number(xxx.value);
+      	if(debug.checked == true) {
+      		document.body.innerHTML += "<p>total is " +total+ " </p>";
+      	}
+      	if(total  <= 100) 
+      	{
+      		for(var i = 0; i < xxx.value; i += 1)
+      		{
+      			if(debug.checked == true) {
+      				document.body.innerHTML += "<p>pushing box.value is " + box.value + " </p>";
+      			}
+      	  		sections.push(box.value);
+      		}
+      		document.body.innerHTML += "<p>Added section " +box.value+ " with percentage value of: " +xxx.value+ "% and the total percentage is: " +sections.length+ "%</p>";
+      		document.getElementById("total").innerHTML = "The current total percentage is: " +sections.length+ "%";
+      	}
+      	else if(total > 100)
+      	{
+      		document.getElementById("total").innerHTML = "That would add up to more than 100%, sections.length = " +sections.length+ " and number.value = " +xxx.value+" total = " + total;
+      	}
+      }
+      
+      function  spin() 
+      {
+      	if(sections.length == 100)
+      	{
+        	var selected = Math.round(Math.random() * 100);
+        	document.getElementById("total").innerHTML = "The Spinner Chose......" +sections[selected]+ "!";
+       	}
+       	else
+       	{
+       		document.getElementById("total").innerHTML = "The percentage is not 100% yet!" +(100 - sections.length)+ "% to go!";
+       	}
       }
     </script>
   </head>
