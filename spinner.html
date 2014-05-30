@@ -2,24 +2,24 @@
 <html>
   <head>
     <title>A Spinner</title>
-    <script type="text/javascript">
-      var sections[];
-      
-      function add() {
-        var name = document.getElementById("name").value;
-        var percent = document.getElementById("percent").value;
-        document.write("Added Section" +name+ "with percentage of" +percent+ "%");
-      }
-      function test() {
-        document.write("Welcome to Spinner Probability Simulator!");
+    <head>
+    <script>
+      document.write("Welcome to Spinner Probability Simulator!");
+      document.write("<p>Name of the section:</p>");
+      document.write('<input type="text" id="name">');
+      document.write("<p>Percentage of total:</p>");
+      document.write('<input type="number" id="percent">');
+      document.write('<input type="button" id="enter" value="Add Section" onclick="add()">');
+     
+      function add()
+      {
+      	var box = document.getElementById("name");
+      	var number = document.getElementById("percent");
+      	document.body.innerHTML += "<p>Added section " +box.value+ " with percentage value of: " +number.value+ "%</p>";
       }
     </script>
   </head>
-  <body onload="test()">
-    <p>Name of the section:</p>
-    <input type="text" id="name">
-    <p>Percentage of total:</p>
-    <input type="number" id="percent">
-    <input type="button" id="enter" value="Add Section" onclick="add()">
+  <body>
+  	<div>-supermiu</div>
   </body>
 </html>
