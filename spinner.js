@@ -1,7 +1,9 @@
 //The js file for /spinner.html
-document.write("<h1>Welcome to Spinner Probability Simulator</h1>");
 var sections[];
 
+function test() {
+  document.write("<h1>Welcome to Spinner Probability Simulator!</h1>");
+}
 function add() {
   var name = document.section.elements["sectionname"].value;
   var percent = document.section.elements["percentage"].value;
