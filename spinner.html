@@ -4,17 +4,24 @@
     <title>A Spinner</title>
     <head>
     <script>
-      document.write("Welcome to Spinner Probability Simulator!");
+      document.write("<h1>Welcome to Spinner Probability Simulator!</h1>");
       document.write("<p>Name of the section:</p>");
       document.write('<input type="text" id="name">');
       document.write("<p>Percentage of total:</p>");
       document.write('<input type="number" id="percent">');
       document.write('<input type="button" id="enter" value="Add Section" onclick="add()">');
-     
+      
+      var sections = [];
+      
       function add()
       {
       	var box = document.getElementById("name");
       	var number = document.getElementById("percent");
+      	for(var i = 0, i <= number.value, i++)
+      	{
+      	  sections.push(box.value);
+      	  document.write("HEY");
+      	}
       	document.body.innerHTML += "<p>Added section " +box.value+ " with percentage value of: " +number.value+ "%</p>";
       }
     </script>
