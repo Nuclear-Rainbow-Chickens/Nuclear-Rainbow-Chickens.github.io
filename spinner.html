@@ -13,7 +13,6 @@
       
       var sections = [];
       
-      var h2 = document.getElementById("total");
       var total = 0;
       
       function add()
@@ -26,7 +25,7 @@
       	  sections.push(box.value);
       	}
       	document.body.innerHTML += "<p>Added section " +box.value+ " with percentage value of: " +number.value+ "%</p>";
-      	h2.innerHTML = "<h2>The Current Total Percentage is " +total+ " %<h2>";
+      	document.getElementById("total").innerHTML = "<h2>The Current Total Percentage is " +total+ " %<h2>";
       }
     </script>
   </head>
