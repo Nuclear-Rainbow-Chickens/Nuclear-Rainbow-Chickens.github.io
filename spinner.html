@@ -5,23 +5,51 @@
     <head>
     <script>
       document.write("<h1>Welcome to Spinner Probability Simulator!</h1>");
-      document.write("<p>Debug Mode?</p>");
-      document.write('<input type="checkbox" id="debug" </br>');
+      document.write('<p>Debug Mode?</p><input type="checkbox" id="debug"> </br>');
+      document.write('<p>Precentages or Degrees?</p><p>Percentage:</p> <input type="radio" id="percentage" name="system" onclick="define()"><p>Degrees: </p> <input type="radio" id="degrees" name="system" onclick="define()">');
       document.write("<p>Name of the section:</p>");
       document.write('<input type="text" id="name">');
-      document.write("<p>Percentage of total:</p>");
-      document.write('<input type="number" id="percent" min="1" max="100" step="1"> </br>');
+      document.write("<p>Numeric Value:</p>");
+      document.write('<input type="number" id="num" min="1" max="100" step="1"> </br>');
       document.write('<input type="button" id="enter" value="Add Section" onclick="add()"> </br>');
-      document.write('<input type="button" id="spin" value="When the percentage is 100%, click here to spin the wheel!" onclick="spin()">');
+      document.write('<input type="button" id="spin" value="When the total is a full circle, click here to spin the wheel!" onclick="spin()">');
       
       var sections = [];
       var total = 0;
       var debug = document.getElementById("debug");
+      var percentradio = document.getElementById("percentage");
+      var degreeradio = document.getElementById("degrees");
+      
+      var stdname;
+      var stdsymbol;
+      var stdmax;
+      
+      function define()
+      {
+     	 if(percentradio.checked == true)
+      	 {
+      		stdname = "percentage";
+      		stdsymbol = "%";
+      		stdmax = 100;
+      	}
+      	else if(degreeradio.checked == true)
+      	{
+      		stdname = "degrees";
+      		stdsymbol = "\xB0"
+      		stdmax = 360;
+      	}
+      	if(debug.checked == true)
+      	{
+      		document.body.innerHTML += "<p>The name is: " +stdname+ " the symbol is: " +stdsymbol+ " and the value is: " +stdmax+ ".</p>";
+      	}
+      	percentradio.disabled = true;
+      	degreeradio.disabled = true;
+      }
       
       function add()
       {
       	var box = document.getElementById("name");
-      	var xxx = document.getElementById("percent");
+      	var xxx = document.getElementById("num");
       	if(debug.checked == true) {
       		document.body.innerHTML += "<p>sections.length is " + sections.length + " </p>";
       		document.body.innerHTML += "<p>xxx.value is " + xxx.value + " </p>";
@@ -30,7 +58,7 @@
       	if(debug.checked == true) {
       		document.body.innerHTML += "<p>total is " +total+ " </p>";
       	}
-      	if(total  <= 100) 
+      	if(total  <= stdmax) 
       	{
       		for(var i = 0; i < xxx.value; i += 1)
       		{
@@ -39,25 +67,26 @@
       			}
       	  		sections.push(box.value);
       		}
-      		document.body.innerHTML += "<p>Added section " +box.value+ " with percentage value of: " +xxx.value+ "% and the total percentage is: " +sections.length+ "%</p>";
-      		document.getElementById("total").innerHTML = "The current total percentage is: " +sections.length+ "%";
+      		document.body.innerHTML += "<p>Added section " +box.value+ " with " +stdname+ " value of: " +xxx.value+ stdsymbol+ "and the total " 
+      		+stdname+ " is: " +sections.length+ stdsymbol +"</p>";
+      		document.getElementById("total").innerHTML = "The current total " +stdname+ " is: " +sections.length+ stdsymbol;
       	}
-      	else if(total > 100)
+      	else if(total > stdmax)
       	{
-      		document.getElementById("total").innerHTML = "That would add up to more than 100%, sections.length = " +sections.length+ " and number.value = " +xxx.value+" total = " + total;
+      		document.getElementById("total").innerHTML = "That would add up to more than " +stdmax+stdsymbol+" " + "sections.length = " +sections.length+ " and number.value = " +xxx.value+" total would be " + total;
       	}
       }
       
       function  spin() 
       {
-      	if(sections.length == 100)
+      	if(sections.length == stdmax)
       	{
-        	var selected = Math.round(Math.random() * 100);
+        	var selected = Math.round(Math.random() * stdmax);
         	document.getElementById("total").innerHTML = "The Spinner Chose......" +sections[selected]+ "!";
        	}
        	else
        	{
-       		document.getElementById("total").innerHTML = "The percentage is not 100% yet!" +(100 - sections.length)+ "% to go!";
+       		document.getElementById("total").innerHTML = "The " +stdname+ " is not " +stdmax+stdsymbol+ " yet!" +(stdmax - sections.length)+ stdsymbol+ " to go!";
        	}
       }
     </script>
