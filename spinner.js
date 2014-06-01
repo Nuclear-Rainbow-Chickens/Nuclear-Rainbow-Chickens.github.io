@@ -1,5 +1,5 @@
 document.write("<h1>Welcome to Spinner Probability Simulator!</h1>");
-document.write('<p>Debug Mode?</p><input type="checkbox" id="debug"> </br>');
+document.write('<p>Debug Mode?<input type="checkbox" id="debug"></p> </br>');
 document.write("<p>Name of the section:</p>");
 document.write('<input type="text" id="name">');
 document.write("<p>Numeric Value:</p>");
