@@ -23,6 +23,7 @@ function add()
    	{
       document.body.innerHTML += "<p>values.length is " + values.length + " </p>";
       document.body.innerHTML += "<p>num.value is " + num.value + " </p>";
+      document.body.innerHTML += "<p>Sections array contains  " + sections.toString() + " </p>";
    	}
  	total = values.length + Number(num.value);
    	if(debug.checked == true) 
@@ -61,5 +62,32 @@ function spin()
        }
        chosen.push(values[selected]);
     }
-    document.getElementById("total").innerHTML = "The Spinner Chose: " +chosen.toString();+ '<input type="button" value="Click here to sort!" id="sort">';
+    document.getElementById("total").innerHTML = "The Spinner Chose: " +chosen.toString()+ '<input type="button" value="Click here to sort!" id="sort" onclick="sort()">';
 }
+
+function search(section) 
+{
+	var count = 0;
+	for (var i = 0; i < chosen.length; i++) 
+	{
+		if (chosen[i] === section) 
+		{
+			count++;
+		}
+	}
+   	return count;
+}
+
+function sort()
+{
+	var tempstring = "";
+	for(var z = 0; z < sections.length; z++)
+	{
+		tempstring += sections[z]+ " appears " +search(sections[z])+ " times or about " +(Math.round((search(sections[z]) / chosen.length) * 10000) / 100)+ " % of the time. \n";
+	}
+	window.alert(tempstring);
+}
+			
+
+
+
