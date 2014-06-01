@@ -83,7 +83,7 @@ function sort()
 	var tempstring = "";
 	for(var z = 0; z < sections.length; z++)
 	{
-		tempstring += sections[z]+ " appears " +search(sections[z])+ " times or about " +(Math.round((search(sections[z]) / chosen.length) * 10000) / 100)+ " % of the time. \n";
+		tempstring += sections[z]+ " appears " +search(sections[z])+ " times or about " +(Math.round((search(sections[z]) / chosen.length) * 10000) / 100)+ " % of the time or " +search(sections[z])+ "/" +sections.length+ " of the time. \n";
 	}
 	window.alert(tempstring);
 }
