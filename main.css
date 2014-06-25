@@ -15,4 +15,6 @@ a.link{font-size: 20px; background-color: lime; display: block; width: 240px; co
 a.normal{font-size: 20px; color: lime; font-family: Comic, "Arial Black";}
 li.nav{float: left;}
 li.normal{float: left;}
+ul.drop{list-style: none; position: absolute; display:none;}
+ul.drop:hover{display:block;}
 table, th, td {border: 1px solid white; color: lime; font-family:Comic, Arial; size: 50px; margin-left: auto; margin-right: auto;}
