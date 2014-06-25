@@ -12,6 +12,7 @@ body{background-color: black;}
 ul.menu{display: inline;list-style-type: none; margin-left: auto; margin-right: auto;}
 ul.normal{margin-left: auto; margin-right: auto;}
 a.link{font-size: 20px; background-color: lime; display: block; width: 240px; color: red; height:70;}
+a.droplink{font-size: 20px; background-color: lime; display: list-item; width: 240px; color: red; height:70;}
 a.normal{font-size: 20px; color: lime; font-family: Comic, "Arial Black";}
 li.nav{float: left;}
 li.normal{float: left;}
