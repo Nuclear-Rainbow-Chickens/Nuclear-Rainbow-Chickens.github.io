@@ -7,12 +7,13 @@ p.text {color:lime; text-align: left; margin-left: 20%; font-size: 24pt; font-fa
 div.center{text-align: center}
 form{text-align: center;}
 a.link:hover{background-color:aqua; color: orange;}
+a.droplink:hover{background-color:purple; color: yellow;}
 form{text-align: center; font-size: 25pt; color: yellow; font-family: Arial, serif;}
 body{background-color: black;}
 ul.menu{display: inline;list-style-type: none; margin-left: auto; margin-right: auto;}
 ul.normal{margin-left: auto; margin-right: auto;}
 a.link{font-size: 35px; background-color: lime; display: block; width: 240px; color: red; height:40px;}
-a.droplink{font-size: 25px; background-color: lime; width: 240px; color: red; height:30px; display:block;}
+a.droplink{font-size: 25px; background-color: yellow; width: 240px; color: purple; height:30px; display:block;}
 a.normal{font-size: 20px; color: lime; font-family: Comic, "Arial Black";}
 li.nav{float: left;}
 li.normal{float: left;}
