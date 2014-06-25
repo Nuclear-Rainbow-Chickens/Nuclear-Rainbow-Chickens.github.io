@@ -9,11 +9,11 @@ form{text-align: center;}
 a.link:hover{background-color:aqua; color: orange;}
 form{text-align: center; font-size: 25pt; color: yellow; font-family: Arial, serif;}
 body{background-color: black;}
-ul.menu{display: inline;list-style-type: none; margin-left: auto; margin-right: auto;}
+ul.menu{display: inline;list-style-type: none; margin-left: auto; margin-right: auto; position:relative;}
 ul.normal{margin-left: auto; margin-right: auto;}
 a.link{font-size: 20px; background-color: lime; display: block; width: 240px; color: red;}
 a.normal{font-size: 20px; color: lime; font-family: Comic, "Arial Black";}
-li.nav{float: left;}
+li.nav{float: left; position:absolute; left:0;}
 li.normal{float: left;}
 ul.drop{list-style: none;}
 table, th, td {border: 1px solid white; color: lime; font-family:Comic, Arial; size: 50px; margin-left: auto; margin-right: auto;}
