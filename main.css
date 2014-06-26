@@ -17,5 +17,5 @@ a.droplink{font-size: 25px; background-color: yellow; width: 240px; color: purpl
 a.normal{font-size: 20px; color: lime; font-family: Comic, "Arial Black";}
 li.nav{float: left;}
 li.normal{float: left;}
-ul.drop{list-style: none; display: none; position:absolute; margin-left: 0px; top: 50px;}
+ul.drop{list-style: none; display: none; position:absolute; margin-left: 0px; top: 50px; left: 0px;}
 table, th, td {border: 1px solid white; color: lime; font-family:Comic, Arial; size: 50px; margin-left: auto; margin-right: auto;}
