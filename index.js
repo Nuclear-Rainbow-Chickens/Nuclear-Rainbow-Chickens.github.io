@@ -1,11 +1,4 @@
-function show(id)
-{
-  var element = document.getElementById(id);
-  element.style.display = "block";
+$("document").ready(function () {
+
+$("#drop").hide();
 }
-function hide(id)
-{
-  var element = document.getElementById(id);
-  element.style.display = "none";
-}
-  
