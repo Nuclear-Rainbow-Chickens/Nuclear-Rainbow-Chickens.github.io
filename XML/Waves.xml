@@ -5,5 +5,10 @@
 		<stage type="runner" value="2"/>
 		<stage type="tank" value="2" />
 	</wave>
+	<wave>
+		<stage type="grunt" value="2"/>
+		<stage type="runner" value="2"/>
+		<stage type="tank" value="2" />
+	</wave>
 	
 </mobs>
