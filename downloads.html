@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      var hide = true;
+      function toggle() {
+        hide = !hide;
+        if(hide == true) {
+          document.getElementById("requirements").visibility = "hidden";
+        }
+        else {
+          document.getElementById("requirements").visibility = "visible";
+        }
+      }
+    </script>
+  </head>
+  
+  <body>
+    <h1>Downloads Page</h1>
+    <div>
+      <h2>JavaScript Test</h2>
+      <p>The Test Files Aren't Ready Yet... But Are You?</p>
+    </div>
+    <div id="requirements">
+      <h2>What You Need</h2>
+      <p>Apache HTTPD</p>
+      <p>PHP</p>
+      <p>Web Browsers To Test</p>
+    </div>
+  </body>
+</html>
