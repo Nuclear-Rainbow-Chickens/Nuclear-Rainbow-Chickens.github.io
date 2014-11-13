@@ -3,7 +3,7 @@
   <head>
     <script>
       var hide = true;
-      window.onload = document.getElementById("requirements").visibility = "hidden";
+      window.onload = function () {document.getElementById("requirements").visibility = "hidden";};
       function toggle() {
         hide = !hide;
         if(hide == true) {
