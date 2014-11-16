@@ -1,18 +1,17 @@
 html,body {height:100%; width:100%}
-body{background-color: #464545;}
+body{background-color: black;}
 
 .body{height:100%; width:100%}
 .header{height: 15%; width: 95%; float: center; margin-left: auto; margin-right: auto}
 .sidebar{height: 50%; width: 15%; float: left; position: fixed; display: block; background-color: white}
 
 .rainbow {
-	-webkit-background: linear-gradient(to right, red , orange, yellow, green, blue);
-	background: linear-gradient(to right, red , orange, yellow, green, blue);
+	background: linear-gradient(to right, red , orange, yellow, lime, #00BFFF);
+
 	color: transparent;
   	-webkit-background-clip: text;
-  	background-clip: text;
   	
-  	font-size: 50pt;
+  	font-size: 40pt;
   	font-family: "Oswald";
   	margin-right: 40px;
   	display: block;
@@ -23,3 +22,4 @@ body{background-color: #464545;}
 
 .link{color: rgb(1,1,1); font-size: 20pt}
 
+.ip:hover{color: #00BFFF}
