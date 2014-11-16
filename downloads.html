@@ -3,14 +3,14 @@
   <head>
     <script>
       var hide = true;
-      window.onload = function () {document.getElementById("requirements").display = "none"; console.log("started");};
+      window.onload = function () {document.getElementById("requirements").style.display = 'none'; console.log("started");};
       function toggle() {
         hide = !hide;
         if(hide == true) {
-          document.getElementById("requirements").display = "none";
+         document.getElementById("requirements").style.display = 'none'
         }
         else {
-          document.getElementById("requirements").display = "block";
+          document.getElementById("requirements").style.display = 'block'
         }
       }
     </script>
