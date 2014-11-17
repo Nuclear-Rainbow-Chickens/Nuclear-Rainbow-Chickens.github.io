@@ -3,7 +3,7 @@ body{background-color: black;}
 
 .body{height:100%; width:100%}
 .header{height: 15%; width: 95%; float: center; margin-left: auto; margin-right: auto}
-.sidebar{height: 50%; width: 15%; float: left; position: fixed; display: block; background-color: white}
+.sidebar{height: 50%; width: 5%; position: fixed; display: block; background: linear-gradient(to right, white,#FFC6C8)}
 
 .rainbow {
 	background: linear-gradient(to right, red , orange, yellow, lime, #00BFFF);
@@ -20,6 +20,10 @@ body{background-color: black;}
   	opacity: 0.9;
 }
 
-.link{color: rgb(1,1,1); font-size: 20pt}
+.link{left: 1%; display: block; color: lime; font-size: 20pt}
+.link:hover{color: #00BFFF; font-size: 30pt}
+
+.download{color: lime; text-align: center;font-size: 30pt}
+.download:hover{color: #00BFFF}
 
 .ip:hover{color: #00BFFF}
