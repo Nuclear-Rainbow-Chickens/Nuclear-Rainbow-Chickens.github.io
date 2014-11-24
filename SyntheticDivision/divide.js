@@ -113,6 +113,7 @@ function parseTop() {
 }
 
 function divide(a) {
+    var roots = [];
     //parse the top numbers
 
     var possn = getFactors(a[a.length - 1]);
@@ -160,7 +161,7 @@ function divide(a) {
             console.groupEnd();
         }
         if(answers[answers.length - 1] == 0) {
-            document.body.innerHTML += "<h1>"+possible[i]+" is an answer</h1>";
+            roots.push(possible[i]);
         }
         if(ub == true) {
             document.body.innerHTML += "<h2>Upper Bound Reached At: "+possible[i]+"</h2>";
@@ -233,7 +234,7 @@ function divide(a) {
                 }
         }
         if(answers[answers.length - 1] == 0) {
-            document.body.innerHTML += "<h1>"+negpossible[i]+" is an answer</h1>";
+            roots.push(possible[i]);
         }
         if(lb == true) {
             document.body.innerHTML += "<h2>Lower Bound Reached At: "+negpossible[i]+"</h2>";
@@ -242,5 +243,5 @@ function divide(a) {
         console.log(answers.toString());
     }
     console.groupEnd();
-    
+    document.body.innerHTML += "<h1>"+roots.toString()+"</roots>";
 }
