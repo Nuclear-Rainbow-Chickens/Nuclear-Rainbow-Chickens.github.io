@@ -27,3 +27,5 @@ body{background-color: black;}
 .download:hover{color: #00BFFF}
 
 .ip:hover{color: #00BFFF}
+
+.tile{float: center;}
