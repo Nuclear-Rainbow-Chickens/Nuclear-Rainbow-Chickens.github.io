@@ -35,7 +35,8 @@ function ipCheck() {
 			lat = google.loader.ClientLocation.latitude;
 			long = google.loader.ClientLocation.longitude;
 			if(lat == null || long == null) {
-				alert("ALL FAILSAFES ERRORED");	
+				alert("ALL FAILSAFES ERRORED");
+				return null;
 			}
 		}
 		printResults(false);	
