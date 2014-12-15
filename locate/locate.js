@@ -32,7 +32,11 @@ function ipCheck() {
 			long = data.lon;
 		}
 		else {
-			alert("ERROR ALL FALLBACKS REACHED AND FAILED!");	
+			lat = google.loader.ClientLocation.latitude;
+			long = google.loader.ClientLocation.longitude;
+			if(lat == null || long == null) {
+				alert("ALL FAILSAFES ERRORED");	
+			}
 		}
 		printResults(false);	
 	});
@@ -50,7 +54,7 @@ function htmlgeo() {
 function positiveCallback(pos) {
 	lat = pos.coords.latitude;
 	long = pos.coords.longitude;
-	printResults();
+	printResults(true);
 }
 
 function printResults(a) {
