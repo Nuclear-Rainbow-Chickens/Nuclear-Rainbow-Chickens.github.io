@@ -59,17 +59,22 @@ function positiveCallback(pos) {
 }
 
 function printResults(a) {
-	document.getElementById("txt").innerHTML = "Latitude: "+lat + "\n" + "Longitude: " + long;
-	if(detectmob() && a) {
-		document.getElementById("mobile").innerHTML = "YOU\'RE ON MOBILE, RUN AROUND IN CIRCLES AND SEE WHAT HAPPENS!" ;	
-	}
-	else if(detectmob() && !a) {
-		document.getElementById("mobile").innerHTML = "ON MOBILE BUT DENIED ACCESS TO GPS" ;
-	}
-	else if(!a) {
-		document.getElementById("mobile").innerHTML = "DESKTOP/LAPTOP DENIED LOCATION SERVICES";
+	if(lat != 0 && long != 0 && !a) {
+		return null;
 	}
 	else {
-		document.getElementById("mobile").innerHTML = "DESKTOP/LAPTOP";
+		document.getElementById("txt").innerHTML = "Latitude: "+lat + "\n" + "Longitude: " + long;
+		if(detectmob() && a) {
+			document.getElementById("mobile").innerHTML = "YOU\'RE ON MOBILE, RUN AROUND IN CIRCLES AND SEE WHAT HAPPENS!" ;	
+		}
+		else if(detectmob() && !a) {
+			document.getElementById("mobile").innerHTML = "ON MOBILE BUT DENIED ACCESS TO GPS" ;
+		}
+		else if(!a) {
+			document.getElementById("mobile").innerHTML = "DESKTOP/LAPTOP DENIED LOCATION SERVICES";
+		}
+		else {
+			document.getElementById("mobile").innerHTML = "DESKTOP/LAPTOP";
+		}
 	}
 }
