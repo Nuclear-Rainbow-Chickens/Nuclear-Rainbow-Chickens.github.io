@@ -59,7 +59,7 @@ function positiveCallback(pos) {
 }
 
 function printResults(a) {
-	if(lat != 0 && long != 0 && !a) {
+	if(lat == 0 && long == 0 && !a) {
 		return null;
 	}
 	else {
