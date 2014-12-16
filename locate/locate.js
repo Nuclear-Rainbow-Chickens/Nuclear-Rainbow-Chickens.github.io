@@ -1,11 +1,9 @@
 var lat = 0;
 var long = 0;
-function getCoords() {	
+function getCoords() {
+	ipCheck();
 	if(navigator.geolocation) {
 		htmlgeo();
-	}
-	else {
-		ipCheck();	
 	}
 }
 
@@ -45,10 +43,10 @@ function ipCheck() {
 
 function htmlgeo() {
 	if(detectmob()) {
-		navigator.geolocation.watchPosition(positiveCallback, ipCheck, {enableHighAccuracy: true});
+		navigator.geolocation.watchPosition(positiveCallback, function () {}, {enableHighAccuracy: true});
 	}
 	else {
-		navigator.geolocation.getCurrentPosition(positiveCallback, ipCheck, {enableHighAccuracy: true});
+		navigator.geolocation.getCurrentPosition(positiveCallback, function () {});
 	}
 }
 
@@ -65,6 +63,9 @@ function printResults(a) {
 	}
 	else if(detectmob() && !a) {
 		document.getElementById("mobile").innerHTML = "ON MOBILE BUT DENIED ACCESS TO GPS" ;
+	}
+	else if(!a) {
+		document.getElementById("mobile").innerHTML = "DESKTOP/LAPTOP DENIED LOCATION SERVICES";
 	}
 	else {
 		document.getElementById("mobile").innerHTML = "DESKTOP/LAPTOP";
