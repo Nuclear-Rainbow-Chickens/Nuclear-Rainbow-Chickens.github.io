@@ -30,9 +30,9 @@ function ipCheck() {
 			long = data.lon;
 		}
 		else {
-			jQuery.getJSON("http://www.geoplugin.net/json.gp", function (data) {
-				lat = data.geoplugin_latitude;
-				long = data.geoplugin_longitude;
+			jQuery.getJSON("http://www.geoplugin.net/json.gp", function (datab) {
+				lat = datab.geoplugin_latitude;
+				long = datab.geoplugin_longitude;
 			});
 			if(lat == null || long == null) {
 				alert("ALL FAILSAFES ERRORED");
