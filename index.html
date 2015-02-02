@@ -10,37 +10,40 @@
         <!--JavaScript-->
         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-50622309-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
+			ga('create', 'UA-50622309-1', 'auto');
+			ga('send', 'pageview');
+		 </script>
+		 <script>
+			var cycles = 0;
+		 	$(document).ready(function () {
+				setInterval(rainbow, 10);
+			});
+			
+			function rainbow() {
+				$("#title").css({color: 'hsl(' + cycles + ',100%,50%)'});
+				cycles += 1;
+			}
+		 </script>
     </head>
+	
     <body>
-        <div class="body">
-            <div class="header">
-                <div style="float: right; height:10%;" >
-                   <div style="background-color: rgba(0,0,0,1); position:relative; z-index: 1; background-clip: border-box"> <span class="rainbow">Nuclear Rainbow Chickens</span></div>
-                </div>
-                <div style="background-image: url(img/NRC.gif); background-size: auto 100%; float: right; height: 100%; width: 100%">
-                    
-                </div>
-            </div>
-            <div class="sidebar">
-                <p style="color: blue; font-size: 30pt;">Links: </p>
-                <ul style="list-style-type: none; position: fixed;">
-                    <li>
-                        <a class="link" href="/">Home</a>
-                    </li>
-                    <li>
-                        <a class="link" href="server.html">Server</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
+		 <!--HEAD SECTION-->
+       <section id="head">
+			 <h1 id="title">Nuclear Rainbow Chickens</h1>
+		 	<nav>
+				<a class="toplink">Home</a>
+				<a class="toplink">Lorem</a>
+				<a class="toplink">Ipsum</a>
+			</nav>
+		 </section>
+		 <!--BODY SECTION-->
+		 <div id="body">
+		 
+		 </div>
     </body>
 </html>

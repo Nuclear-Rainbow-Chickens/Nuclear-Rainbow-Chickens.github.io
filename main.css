@@ -1,31 +1,10 @@
-html,body {height:100%; width:100%}
-body{background-color: black;}
+html,body {height:100%; width:100%;overflow: hidden;}
 
-.body{height:100%; width:100%}
-.header{height: 15%; width: 95%; float: center; margin-left: auto; margin-right: auto}
-.sidebar{height: 50%; width: 5%; position: fixed; display: block; background: linear-gradient(to right, white,#FFC6C8)}
+#head{top: 0px; left: 0px; padding-left: 10px; height: 10%; width: 100%; background-color: black; position: fixed;}
+#title{height: 60%; margin-top: 0px; margin-bottom: 0px; font-family: Oswald,Arial; font-size: 30pt; white-space: nowrap;}
+#logo{height: 100%; top: 0px;}
+nav {height:40%; text-align: center; margin-left: auto; margin-right: auto}
+.toplink {font-family: Ubuntu,Comic; padding-left: 50px; padding-right: 50px; color: white; font-size: 19pt;}
+.toplink:hover{text-decoration: underline;font-weight: 900;}
 
-.rainbow {
-	background: linear-gradient(to right, red , orange, yellow, lime, #00BFFF);
-
-	color: transparent;
-  	-webkit-background-clip: text;
-  	
-  	font-size: 40pt;
-  	font-family: "Oswald";
-  	margin-right: 40px;
-  	display: block;
-  	position: relative;
-  	z-index: 1;
-  	opacity: 0.9;
-}
-
-.link{left: 1%; display: block; color: lime; font-size: 20pt}
-.link:hover{color: #00BFFF; font-size: 30pt}
-
-.download{color: lime; text-align: center;font-size: 30pt}
-.download:hover{color: #00BFFF}
-
-.ip:hover{color: #00BFFF}
-
-.tile{float: center;}
+#body{bottom: 0px; left: 0px; padding-left: 10px; padding-right: 10px; height: 90%; width: 100%; position: absolute; background-color:purple;}
