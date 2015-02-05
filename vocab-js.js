@@ -40,6 +40,9 @@ function addDef(url, i) {
 			definition = data[0].text;
 			pos = data[0].partOfSpeech;
 			example = data[0].exampleUses[0];
+			if(example == "") {
+				example = "EXAMPLE NOT FOUND";
+			}
 		}
 		catch (e) {
 			definition = "DEFINITION NOT FOUND";
