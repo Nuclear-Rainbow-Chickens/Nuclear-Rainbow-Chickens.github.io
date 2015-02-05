@@ -39,15 +39,19 @@ function addDef(url, i) {
 		try {
 			definition = data[0].text;
 			pos = data[0].partOfSpeech;
-			example = data[0].exampleUses[0].text;
-			if(typeof example === undefined) {
-				example = "EXAMPLE NOT FOUND";
-			}
 		}
 		catch (e) {
 			definition = "DEFINITION NOT FOUND";
 			pos = "PART OF SPEECH NOT FOUND";
-			example = "EXAMPLE NOT FOUND";
+		}
+		try {
+			example = data[0].exampleUses[0].text;
+			if(typeof example === undefined) {
+				example = "EXAMPLE NOT GIVEN";
+			}
+		}
+		catch (e) {
+			example = "EXAMPLE NOT FOUND";	
 		}
 		deflist[i] = definition;
 		poslist[i] = pos;
