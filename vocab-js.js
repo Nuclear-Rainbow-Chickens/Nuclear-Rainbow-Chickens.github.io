@@ -1,5 +1,6 @@
 var deflist = [];
 var words = [];
+var poslist = [];
 var counter;
 $(document).ready(function () {
 	$("#enter").click(function () {
@@ -26,14 +27,19 @@ $(document).ready(function () {
 function addDef(url, i) {
 	jQuery.getJSON(url, function (data, status, jq) {							
 		console.log(data);
-		var definition; 
+		var definition;
+		var pos;
 		try {
 			definition = data[0].text;
+			pos = data[0].partOfSpeech;
 		}
 		catch (e) {
 			definition = "DEFINITION NOT FOUND";
+			pos = "PART OF SPEECH NOT FOUND";
 		}
+		console.log("pos: "+pos);
 		deflist[i] = definition;
+		poslist[i] = pos;
 		++counter;
 		if(counter == words.length) {
 			addTerms();
@@ -47,9 +53,12 @@ function addTerms() {
 		var row = document.createElement("tr");
 		var wordbox = document.createElement("th");
 		wordbox.textContent = words[i];
-		var defbox = document.createElement("th");
+		var defbox = document.createElement("td");
 		defbox.textContent = deflist[i];
+		var posbox = document.createElement("td");
+		posbox.textContent = poslist[i];
 		row.appendChild(wordbox);
+		row.appendChild(posbox);
 		row.appendChild(defbox);
 		$("#chart").append(row);
 	}
