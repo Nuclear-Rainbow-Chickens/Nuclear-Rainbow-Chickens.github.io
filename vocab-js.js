@@ -1,9 +1,15 @@
 var deflist = [];
 var words = [];
 var poslist = [];
+var exlist = [];
 var counter;
 $(document).ready(function () {
 	$("#enter").click(function () {
+		deflist = [];
+		words = [];
+		poslist = [];
+		exlist = [];
+		counter = 0;
 		var text = $("#text").val();	
 		words = text.split(/\s+/g);
 		for(var i = 0; i < words.length; i++) {
@@ -29,17 +35,20 @@ function addDef(url, i) {
 		console.log(data);
 		var definition;
 		var pos;
+		var example;
 		try {
 			definition = data[0].text;
 			pos = data[0].partOfSpeech;
+			example = data[0].exampleUses[0];
 		}
 		catch (e) {
 			definition = "DEFINITION NOT FOUND";
 			pos = "PART OF SPEECH NOT FOUND";
+			example = "EXAMPLE NOT FOUND";
 		}
-		console.log("pos: "+pos);
 		deflist[i] = definition;
 		poslist[i] = pos;
+		exlist[i] = example;
 		++counter;
 		if(counter == words.length) {
 			addTerms();
@@ -57,9 +66,12 @@ function addTerms() {
 		defbox.textContent = deflist[i];
 		var posbox = document.createElement("td");
 		posbox.textContent = poslist[i];
+		var exbox = document.createElement("td");
+		exbox.textContent = exlist[i];
 		row.appendChild(wordbox);
 		row.appendChild(posbox);
 		row.appendChild(defbox);
+		row.appendChild(exbox);
 		$("#chart").append(row);
 	}
 }
