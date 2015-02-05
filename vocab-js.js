@@ -23,7 +23,7 @@ $(document).ready(function () {
 		for(var i = 0; i < words.length; i++) {
 			w = words[i];
 			console.log(w);
-			var url = "http://api.wordnik.com:80/v4/word.json/"+w+"/definitions?limit=1&includeRelated=false&sourceDictionaries=webster&useCanonical=false&includeTags=false&api_key=a2a73e7b926c924fad7001ca3111acd55af2ffabf50eb4ae5"
+			var url = "http://api.wordnik.com:80/v4/word.json/"+w+"/definitions?limit=1&includeRelated=false&sourceDictionaries=all&useCanonical=false&includeTags=false&api_key=a2a73e7b926c924fad7001ca3111acd55af2ffabf50eb4ae5"
 			console.log(url);
 			addDef(url, i);
 		}
