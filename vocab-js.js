@@ -39,7 +39,7 @@ function addDef(url, i) {
 		try {
 			definition = data[0].text;
 			pos = data[0].partOfSpeech;
-			example = data[0].exampleUses[0];
+			example = data[0].exampleUses[0].text;
 			if(typeof example === undefined) {
 				example = "EXAMPLE NOT FOUND";
 			}
