@@ -76,8 +76,8 @@ function addTerms() {
 		var exbox = document.createElement("td");
 		exbox.textContent = exlist[i];
 		row.appendChild(wordbox);
-		row.appendChild(posbox);
 		row.appendChild(defbox);
+		row.appendChild(posbox);
 		row.appendChild(exbox);
 		$("#chart").append(row);
 	}
